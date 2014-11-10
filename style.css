@@ -1,0 +1,49 @@
+#title {
+	text-align:center;
+	position: center;
+	width: 500
+}
+
+<!-- --> 
+.center
+{
+	margin:auto;
+	width:500;
+	<!-- background-color:#b0e0e6; -->
+}
+
+p.margin
+{
+	margin-top:100px;
+	margin-bottom:10px;
+	margin-right:100px;
+	margin-left:100px;
+}
+
+body
+{
+	font-family:Lucida Sans Unicode 
+}
+
+.address{
+	font-style:italic;
+}
+#wrapper{
+	width:950px;
+	padding:15px;
+}
+#wrapper div{
+	margin:5px 0;
+}
+#wrapper div.example,#wrapper div.address{
+	margin:0;
+}
+#wrapper div.example{
+	padding:10px;
+	background-color:#DDD;
+	font-size:12px;
+}
+pre{
+	padding:10px;
+	border:1px solid #DDD;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Email Plugin</title>
+		<meta name="keywords" content="Sonia Fajardo, Sonia L Fajardo, Sonia Liliana Fajardo, Front end developer, Full stack engineer, Web Developer, jQuery email, plugin, jquery email plugin"/>
+        <meta name="description" content="jQuery email plugin"/>
+        <meta name="author" content="Sonia Fajardo"/>
+        <meta name="revised" content="Sonia Fajardo, 9/8/2010"/>
+        <meta http-equiv="Content-Language" content="en"/>
+        <meta name="language" content="en"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+		<script src="jquery.email.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="http://soniafajardo.com/style.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<a href="http://www.soniafajardo.com" title="Back to my site">&lt; Back to my site</a>
+			<h2>jQuery Email plugin</h2>
+			<div>
+				This jQuery plugin shows yet another way in which you can protect your email from spam.	
+				It appends an html anchor element with the email address created from the parameters you pass.
+			</div>
+	 
+			<div>
+				You can use is it by following these 3 steps:
+				<ol>
+					<li>
+						Include the jQuery library and 
+						<a href="http://www.soniafajardo.com/plugins/jquery.email.js" title="JQuery plugin code">jquery.email.js</a> 
+						in your page like this:
+							
+<pre><code>&lt;head&gt;
+	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" 
+		type="text/javascript"&gt;&lt;script&gt;
+	&lt;script src="jquery.email.js" type="text/javascript"&gt;&lt;script&gt;
+&lt;/head&gt;</code></pre>
+
+					</li>
+				
+					<li>
+						Create an html element where your email address will be displayed:
+				
+<pre><code>&lt;div id="emailHere"&gt;Email me here: &lt;/div&gt;<br/>
+</code></pre>
+			
+					</li>
+					
+					<li>
+						Call the function 'email(userName, domain, topLevelDomain)' like this:
+					
+<pre><code>&lt;script type="text/javascript"&gt;
+	$(document).ready(function(){
+	$('#emailHere').email('userName', 'gmail', 'com');});
+&lt;script&gt;</code></pre>
+				
+					</li>
+					
+				</ol>
+				
+				<div>
+				When the script is run, this anchor element gets appended to the div with id="emailHere":
+				</div>
+				<pre><code>&lt;a href="mailto: userName@gmail.com" title="userName@gmail.com">userName@gmail.com&lt;/a&gt;</code></pre>
+			
+			</div>
+			
+			<div>The line below uses the plugin:</div>
+			
+			<div class="example">
+				<div id="emailHere">Email me here:  </div>
+			</div>
+			
+			<h3>Another example</h3>
+			
+			<div>Another more complete example uses the noscript tag for those that do not have javascript enabled:</div>
+		
+<pre><code>&lt;div&gt;
+	My personal email address is: 
+	&lt;span id="personalEmail"&gt; 
+		&lt;noscript&gt; 
+			&lt;address&gt;sonialfajardo88 at gmail dot com&lt;/address&gt;
+		&lt;/noscript&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+		
+			<div>And:</div>
+		
+<pre><code>&lt;script type="text/javascript"&gt;
+	$(document).ready(function(){
+	$('#personalEmail').email('sonialfajardo88', 'gmail', 'com');});
+&lt;script&gt;</code></pre>
+		
+			<div>If JavaScript is not enabled, this gets displayed:</div>
+			
+			<div class="example">
+				My personal email address is:
+				<div class="address">sonialfajardo88 at gmail dot com</div>
+			</div>
+			
+			<div>If JavaScript is enabled, this gets displayed:</div>
+			
+			<div class="example">
+				My personal email address is: <span id="personalEmail"><noscript><address>sonialfajardo88 at gmail dot com</address></noscript></span>
+			</div>
+			
+			<script type="text/javascript">
+				$(document).ready(function()
+				{
+					$('#emailHere').email('userName', 'gmail', 'com');
+					$('#personalEmail').email('sonialfajardo88', 'gmail', 'com');
+				});
+			</script>
+		</div>
+	</body>
+</html>
