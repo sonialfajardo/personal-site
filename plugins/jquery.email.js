@@ -2,7 +2,7 @@
  * Email plugin for jQuery
  * Please use as you wish at your own risk.
  * @version 1.0
- * @author Sonia Ross
+ * @author Sonia Fajardo
  */
 (function($)
 {
